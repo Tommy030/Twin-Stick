@@ -10,14 +10,13 @@ public class MovementPlayer : MonoBehaviour
     [SerializeField] KeyCode Right_;
     [SerializeField] KeyCode Down_;
 
+    [SerializeField] KeyCode CheatKnop;
     [Header("Non-Adjustables")]
     private PlayerStats Stats;
 
     private void Awake()
     {
         Stats = GetComponent<PlayerStats>();
-      
-
     }
 
     private void FixedUpdate()

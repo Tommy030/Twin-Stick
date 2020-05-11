@@ -7,16 +7,21 @@ public class Pickupable : MonoBehaviour
     [Header("Adjustables")]
     [SerializeField] private float AmountAddedArmour;
     [SerializeField] private bool Armor;
+
     [SerializeField] private float AmountAddedHP;
     [SerializeField] private bool HP;
+
+    [SerializeField] private int AmountAddedClips;
+    [SerializeField] private bool Clips;
 
     [SerializeField] private bool Delete;
 
     [Header("Non-Adjustables")]
     PlayerStats Stats;
+
     private void OnCollisionEnter(Collision collision)
     {
-        if (collision.gameObject.CompareTag("Player"))
+        if (collision.gameObject.tag == ("Player"))
         {
             Stats = collision.gameObject.GetComponent<PlayerStats>();
             if (Armor && Stats.PlayerArmour < Stats.MaxArmour)
@@ -24,9 +29,14 @@ public class Pickupable : MonoBehaviour
                 Stats.PlayerArmour += AmountAddedArmour;
                 Delete = true;
             }
-            else if (HP && Stats.PlayerHP < Stats.MaxHP)
+            if (HP && Stats.PlayerHP < Stats.MaxHP)
             {
                 Stats.PlayerHP += AmountAddedHP;
+                Delete = true;
+            }
+             if (Clips && Stats.Clips < Stats.MaxAmountClips)
+            {
+                Stats.Clips += AmountAddedClips;
                 Delete = true;
             }
             if (Delete)
