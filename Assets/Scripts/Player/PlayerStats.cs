@@ -36,6 +36,8 @@ public class PlayerStats : MonoBehaviour
     [SerializeField] public float FireRate;
     [SerializeField] public string WeaponName;
 
+    [SerializeField] public Gun[] GunStats;
+
     [Header("Keycard")]
     public List<string> Keycard = new List<string>();
 
