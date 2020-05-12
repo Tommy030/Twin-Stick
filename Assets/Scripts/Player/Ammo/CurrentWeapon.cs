@@ -10,7 +10,7 @@ public class CurrentWeapon : MonoBehaviour
     
     
     private PlayerStats Stats;
-    private Gun GunStats;
+    [SerializeField]private Gun GunStats;
 
     public Gun NewGun;
 
@@ -23,7 +23,6 @@ public class CurrentWeapon : MonoBehaviour
     {
         if (NewWeapon)
         {
-         
               Stats.AmmoPerClip = Stats.AmmoTypes[HoldingWeapon].AmmoPerClip;
               Stats.MaxAmountClips = Stats.AmmoTypes[HoldingWeapon].MaxClips;
               Stats.Clips = Stats.AmmoTypes[HoldingWeapon].ClipsCurrent;
@@ -37,11 +36,12 @@ public class CurrentWeapon : MonoBehaviour
     }
     public void SwapGuns()
     {
-        GunStats = GetComponent<Gun>();
+       
 
-
+        //Reset gun
         GunStats.Weaponspray = GunStats.StartingSpray;
         GunStats.FireRate = GunStats.StartingFireRate;
+
 
         HoldingWeapon = NewGun.WeaponType;
         GunStats = NewGun;

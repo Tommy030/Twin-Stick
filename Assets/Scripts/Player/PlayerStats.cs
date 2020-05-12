@@ -15,7 +15,7 @@ public class PlayerStats : MonoBehaviour
     
     [Header("Ammo")]
     [SerializeField] public int AmmoInUsedClip;
-    [SerializeField] public int MaxAmmoInUsed;
+
 
     [SerializeField] public int Clips;
     [SerializeField] public int MaxAmountClips;
@@ -36,7 +36,7 @@ public class PlayerStats : MonoBehaviour
     [SerializeField] public float FireRate;
     [SerializeField] public string WeaponName;
 
-    [SerializeField] public Gun[] GunStats;
+    [SerializeField] public Gun[] GunStats; 
 
     [Header("Keycard")]
     public List<string> Keycard = new List<string>();
@@ -44,7 +44,7 @@ public class PlayerStats : MonoBehaviour
    
     private void Update()
     {
-        Debug.Log(AmmoTypes[0].AmmoType);
+
         if (PlayerHP > MaxHP)
             PlayerHP = MaxHP;
 

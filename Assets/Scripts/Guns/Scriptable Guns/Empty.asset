@@ -1,0 +1,27 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 166d3be03ef58ba479114bd7e8974af9, type: 3}
+  m_Name: Empty
+  m_EditorClassIdentifier: 
+  GunImage: {fileID: 0}
+  StartingSpray: 0
+  Weaponspray: 0
+  MaxSpray: 0
+  WeaponDamage: 0
+  StartingFireRate: 0
+  FireRate: 0
+  MaxFireRate: 0
+  WeaponName: 
+  WeaponType: 0
+  MinAmmo: 0
+  AmmoInClip: 0
+  MaxAmmo: 0

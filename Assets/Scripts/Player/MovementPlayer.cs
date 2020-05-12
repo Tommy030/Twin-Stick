@@ -11,6 +11,7 @@ public class MovementPlayer : MonoBehaviour
     [SerializeField] KeyCode Down_;
 
     [SerializeField] KeyCode CheatKnop;
+
     [Header("Non-Adjustables")]
     private PlayerStats Stats;
 
@@ -47,5 +48,4 @@ public class MovementPlayer : MonoBehaviour
         if (Input.GetKey(Down_))
             transform.position += Vector3.right* Stats.MovementSpeed * Time.deltaTime;
     }
-    
 }
