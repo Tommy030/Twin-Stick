@@ -6,6 +6,9 @@ using UnityEngine;
 public class Gun : ScriptableObject
 {
     [Header("Adjustables")]
+
+    public Sprite GunImage;
+    
     public float StartingSpray;
     public float Weaponspray;
     public float MaxSpray;
@@ -17,6 +20,7 @@ public class Gun : ScriptableObject
     public float MaxFireRate;
 
     public string WeaponName;
+    [Tooltip("0 = AR, 1 = PISTOL, 2 = SNIPER, 3 = SHOTGUN, 4 = MINIGUN")]
     public int WeaponType;
 
     //0 AR; 
@@ -28,7 +32,5 @@ public class Gun : ScriptableObject
     public int MinAmmo;
     public int AmmoInClip;
     public int MaxAmmo;
-
-    
 
 }

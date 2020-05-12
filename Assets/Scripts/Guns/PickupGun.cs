@@ -17,7 +17,6 @@ public class PickupGun : MonoBehaviour
 
             Current.NewGun = Stats;
             Current.SwapGuns();
-
         }
     }
 }
