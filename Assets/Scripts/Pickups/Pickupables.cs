@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Pickupable : MonoBehaviour
+public class Pickupables : MonoBehaviour
 {
     [Header("Adjustables")]
     [SerializeField] private float AmountAddedArmour;
@@ -14,10 +14,11 @@ public class Pickupable : MonoBehaviour
     [SerializeField] private int AmountAddedClips;
     [SerializeField] private bool Clips;
 
-    [SerializeField] private bool Delete;
-
     [Header("Non-Adjustables")]
+    
     PlayerStats Stats;
+    
+    private bool Delete;
 
     private void OnCollisionEnter(Collision collision)
     {
@@ -34,14 +35,13 @@ public class Pickupable : MonoBehaviour
                 Stats.PlayerHP += AmountAddedHP;
                 Delete = true;
             }
-             if (Clips && Stats.Clips < Stats.MaxAmountClips)
+            if (Clips && Stats.Clips < Stats.MaxAmountClips)
             {
                 Stats.Clips += AmountAddedClips;
                 Delete = true;
             }
             if (Delete)
                 Destroy(gameObject);
-
         } 
 
     }

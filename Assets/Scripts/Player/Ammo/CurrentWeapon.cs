@@ -4,10 +4,16 @@ using UnityEngine;
 
 public class CurrentWeapon : MonoBehaviour
 {
-    PlayerStats Stats;
 
     public int HoldingWeapon;
     public bool NewWeapon;
+    
+    
+    private PlayerStats Stats;
+    private Gun GunStats;
+
+    public Gun NewGun;
+
     private void Awake()
     {
         Stats = GetComponent<PlayerStats>();
@@ -20,11 +26,26 @@ public class CurrentWeapon : MonoBehaviour
          
               Stats.AmmoPerClip = Stats.AmmoTypes[HoldingWeapon].AmmoPerClip;
               Stats.MaxAmountClips = Stats.AmmoTypes[HoldingWeapon].MaxClips;
-               Stats.Clips = Stats.AmmoTypes[HoldingWeapon].ClipsCurrent;
+              Stats.Clips = Stats.AmmoTypes[HoldingWeapon].ClipsCurrent;
+              NewWeapon = !NewWeapon;
         }
         else
         {
+            HoldingWeapon =  GunStats.WeaponType; 
             Stats.AmmoTypes[HoldingWeapon].ClipsCurrent = Stats.Clips;
         }
+    }
+    public void SwapGuns()
+    {
+        GunStats = GetComponent<Gun>();
+
+
+        GunStats.Weaponspray = GunStats.StartingSpray;
+        GunStats.FireRate = GunStats.StartingFireRate;
+
+        HoldingWeapon = NewGun.WeaponType;
+        GunStats = NewGun;
+        
+        NewWeapon = true;
     }
 }
