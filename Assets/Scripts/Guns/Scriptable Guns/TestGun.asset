@@ -17,11 +17,12 @@ MonoBehaviour:
   Weaponspray: 0
   MaxSpray: 0
   WeaponDamage: 0
-  StartingFireRate: 0
-  FireRate: 0
-  MaxFireRate: 0
+  StartingFireRate: 4
+  FireRate: 5
+  MaxFireRate: 6
   WeaponName: 
-  WeaponType: 0
+  WeaponType: 1
+  BulletSpeed: 4
   MinAmmo: 0
-  AmmoInClip: 0
-  MaxAmmo: 0
+  AmmoInClip: 28
+  MaxAmmo: 60

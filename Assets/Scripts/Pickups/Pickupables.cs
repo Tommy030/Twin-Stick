@@ -14,6 +14,9 @@ public class Pickupables : MonoBehaviour
     [SerializeField] private int AmountAddedClips;
     [SerializeField] private bool Clips;
 
+    [SerializeField] private KeyCardScriptable KeyCard;
+    [SerializeField] private bool KeyC;
+    
     [Header("Non-Adjustables")]
     
     PlayerStats Stats;
@@ -40,8 +43,14 @@ public class Pickupables : MonoBehaviour
                 Stats.Clips += AmountAddedClips;
                 Delete = true;
             }
+            if(KeyC)
+            {
+                Stats.Keycard.Add(KeyCard);
+                Delete = true;
+            }
             if (Delete)
                 Destroy(gameObject);
+            
         } 
 
     }

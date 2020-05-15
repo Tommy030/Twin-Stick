@@ -6,6 +6,7 @@ public class Bullet : MonoBehaviour
 {
     [Header("Adjustbales")]
     [SerializeField] public float Bulletspeed;
+    [SerializeField] public float Damage;
 
     private void Update()
     {

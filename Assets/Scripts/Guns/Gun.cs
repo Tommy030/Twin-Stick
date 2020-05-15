@@ -23,6 +23,7 @@ public class Gun : ScriptableObject
     [Tooltip("0 = AR, 1 = PISTOL, 2 = SNIPER, 3 = SHOTGUN, 4 = MINIGUN")]
     public int WeaponType;
 
+    public int BulletSpeed;
     //0 AR; 
     //1 Pistol; 
     //2 Sniper; 

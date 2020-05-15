@@ -12,21 +12,28 @@ public class GunShoot : MonoBehaviour
     [SerializeField] Transform FirePos;
     public Bullet Bull;
     public PlayerStats Stats;
-    
 
-    public float FireRate;
+
     private bool Cooldown;
-    private bool Reload;
+    private bool Reloading;
+
     [SerializeField] private float Timer;
     [SerializeField] private float TimerReload;
+
     private void Awake()
     {
 
         Stats = FindObjectOfType<PlayerStats>();
-        FireRate = Stats.FireRate;
+     
     }
     private void Update()
     {
+
+    }
+
+    void Time ( float FireRate)
+    {
+
         if (Timer > 0)
         {
             Cooldown = true;
@@ -37,33 +44,30 @@ public class GunShoot : MonoBehaviour
         {
             Cooldown = !Cooldown;
         }
-        Shoot();
     }
-    void Shoot()
+    public void Shoot(Gun WeaponHold)
     {
-        if (Input.GetMouseButton(0) && Cooldown == false && Stats.AmmoInUsedClip > 0) // voeg hierbij toe dat als reload true is het nie gebeurd.
+        Time(WeaponHold.FireRate);
+
+        if (Input.GetMouseButton(0) && !Cooldown && WeaponHold.AmmoInClip > 0)
         {
-            Stats.AmmoInUsedClip -= 1;
+            WeaponHold.AmmoInClip -= 1;
             Timer = 100;
             Bullet Bul = Instantiate(Bull, FirePos.position, FirePos.rotation) as Bullet;
-            Bul.Bulletspeed = BulletSpeed;
+            Bul.Bulletspeed = WeaponHold.BulletSpeed;
+            Bul.Damage = WeaponHold.WeaponDamage;
+
         }
-        else if (Stats.AmmoInUsedClip == 0 )
+        Reload(WeaponHold);
+    }
+    void Reload(Gun WeaponHold)
+    {
+          if (Input.GetKey(KeyCode.R))
         {
-
-            TimerReload += Time.deltaTime;
-            if (Input.GetKey(KeyCode.R))
+            if (WeaponHold.AmmoInClip < WeaponHold.MaxAmmo && Stats.Clips > 0)
             {
-                if (Stats.Clips > 0)
-                {
-                    //reload...
-                    Stats.Clips -= 1;
-                    Stats.AmmoInUsedClip += Stats.AmmoPerClip;
-                    if (Stats.AmmoInUsedClip > Stats.AmmoPerClip)
-                        Stats.AmmoInUsedClip = Stats.AmmoPerClip;
-
-                }
-                //Reload = true;
+                Stats.Clips -= 1;
+                WeaponHold.AmmoInClip = WeaponHold.MaxAmmo;
             }
         }
     }

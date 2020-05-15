@@ -14,13 +14,14 @@ public class PlayerStats : MonoBehaviour
     [SerializeField] public float MaxArmour;
     
     [Header("Ammo")]
-    [SerializeField] public int AmmoInUsedClip;
+    
 
 
     [SerializeField] public int Clips;
     [SerializeField] public int MaxAmountClips;
     [SerializeField] public int AmmoPerClip;
 
+    [SerializeField] public int AmmoType;
     [SerializeField] public Ammo[] AmmoTypes;
     //0 AR; 
     //1 Pistol; 
@@ -31,15 +32,12 @@ public class PlayerStats : MonoBehaviour
   
 
 
-    [Header("Weapon")]
-    [SerializeField] public float WeaponDamage;
-    [SerializeField] public float FireRate;
-    [SerializeField] public string WeaponName;
+
 
     [SerializeField] public Gun[] GunStats; 
 
     [Header("Keycard")]
-    public List<string> Keycard = new List<string>();
+    public List<KeyCardScriptable> Keycard = new List<KeyCardScriptable>();
 
    
     private void Update()
@@ -52,5 +50,14 @@ public class PlayerStats : MonoBehaviour
             PlayerArmour = MaxArmour;
         else if (Clips > MaxAmountClips)
             Clips = MaxAmountClips;
+
+
+        ClipsChecker();
+    }
+    void ClipsChecker()
+    {
+        Clips = AmmoTypes[AmmoType].ClipsCurrent;
+        MaxAmountClips = AmmoTypes[AmmoType].MaxClips;
+        AmmoPerClip = AmmoTypes[AmmoType].AmmoPerClip;
     }
 }
