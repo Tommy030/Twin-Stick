@@ -22,7 +22,7 @@ MonoBehaviour:
   MaxFireRate: 6
   WeaponName: 
   WeaponType: 1
-  BulletSpeed: 4
+  BulletSpeed: 100
   MinAmmo: 0
-  AmmoInClip: 28
+  AmmoInClip: 38
   MaxAmmo: 60
