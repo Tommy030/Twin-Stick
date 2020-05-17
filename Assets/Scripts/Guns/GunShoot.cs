@@ -26,10 +26,6 @@ public class GunShoot : MonoBehaviour
         Stats = FindObjectOfType<PlayerStats>();
      
     }
-    private void Update()
-    {
-
-    }
 
     void Time ( float FireRate)
     {
@@ -47,6 +43,7 @@ public class GunShoot : MonoBehaviour
     }
     public void Shoot(Gun WeaponHold)
     {
+        
         Time(WeaponHold.FireRate);
 
         if (Input.GetMouseButton(0) && !Cooldown && WeaponHold.AmmoInClip > 0)

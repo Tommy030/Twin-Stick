@@ -22,8 +22,12 @@ public class Gunstats : MonoBehaviour
     }
     private void Update()
     {
+        if (CurrentStats != null)
+        {
         Shoot.Shoot(CurrentStats);
         LoadPrint(CurrentStats);
+
+        }
     }
 
     public void LoadPrint(Gun A)
