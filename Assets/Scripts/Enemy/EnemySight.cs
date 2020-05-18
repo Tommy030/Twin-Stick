@@ -2,23 +2,28 @@
 using System.Collections.Generic;
 using UnityEngine;
 
+
 public class EnemySight : MonoBehaviour
 {
-  [SerializeField]  public float Angle = 10f;
+    [SerializeField]  public float Angle = 10f;
     [SerializeField] public float Radius;
+    [SerializeField]private float Turnspeed;
+    [SerializeField] Transform Player;
+    
+
+
+
     public bool PlayerSEE;
 
+    [SerializeField]public Vector3 LastLocPlayerSeen;
 
-    [SerializeField]private float Turnspeed;
- 
-
-   [SerializeField] Transform Player;
-
+    
     private void Update()
     {
         PlayerSEE = InFOV(transform, Player, Angle, Radius);
         if (PlayerSEE)
         {
+            LastLocPlayerSeen = Player.position;
             //get dir
             Vector3 dir = Player.position - transform.position;
             //get target rot
