@@ -60,4 +60,6 @@ public class PlayerStats : MonoBehaviour
         MaxAmountClips = AmmoTypes[AmmoType].MaxClips;
         AmmoPerClip = AmmoTypes[AmmoType].AmmoPerClip;
     }
+
+    
 }

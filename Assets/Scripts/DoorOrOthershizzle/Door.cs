@@ -20,14 +20,21 @@ public class Door : MonoBehaviour
 
             if (Input.GetKey(KeyCode.E))
             {
-                foreach (KeyCardScriptable Card in Stats.Keycard)
+                if (KeyCard)
                 {
-                    if (Card == ThisDoorsKeyID)
+                    foreach (KeyCardScriptable Card in Stats.Keycard)
                     {
-                        
-                        //een code om whatever deur nu te doen weetj. idk... geen zin in. als t goed is werkt dit idk. we zien wel
+                        if (Card == ThisDoorsKeyID)
+                        {
+
+                            //een code om whatever deur nu te doen weetj. idk... geen zin in. als t goed is werkt dit idk. we zien wel
+                        }
+
+
                     }
-                        
+                }
+            if (!KeyCard)
+                {
 
                 }
             }
