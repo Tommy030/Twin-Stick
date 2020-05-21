@@ -1,7 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-
+using UnityEngine.UI;
 public class Gunstats : MonoBehaviour
 {
     [Header("Adjustable")]
@@ -43,4 +43,10 @@ public class Gunstats : MonoBehaviour
         Stats.AmmoType = gun.WeaponType;
         //put in new weapon stats
     }
+    public void SentUI(Text Ammo,Text WeaponName)
+    {
+   
+        Ammo.text = (CurrentStats.AmmoInClip.ToString() + "/" + CurrentStats.MaxAmmo.ToString());
+        WeaponName.text = (CurrentStats.WeaponName);
+    } 
 }

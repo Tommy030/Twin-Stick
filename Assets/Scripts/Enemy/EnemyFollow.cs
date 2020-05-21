@@ -47,6 +47,7 @@ public class EnemyFollow : MonoBehaviour
         States();
         AtDest();
         Chasing();
+        Shoot();
     }
     void States()
     {
@@ -54,6 +55,7 @@ public class EnemyFollow : MonoBehaviour
         {
             LastSeen = Sight.LastLocPlayerSeen;
             State = EnemyState.Shooting;
+            
         }
         else if (State == EnemyState.Shooting && !Sight.PlayerSEE)
         {
@@ -64,7 +66,13 @@ public class EnemyFollow : MonoBehaviour
     {
         if (State == EnemyState.Shooting)
         {
+            Agent.isStopped = true;
             //a fucking shooting script.
+        }
+        else
+        {
+            Agent.isStopped = false;      
+            
         }
     }
     void AtDest()
