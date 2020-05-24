@@ -27,6 +27,14 @@ public class EnemyFollow : MonoBehaviour
     [SerializeField]private bool Wait;
     [SerializeField] private float WaitingTime;
     private float WaitingTimerLeft;
+
+
+    //Weapon
+    [SerializeField]ScriptEnemy Stats;
+    [SerializeField] private float Timer;
+    [SerializeField] Transform Firepos;
+    
+
     private void Awake()
     {
 
@@ -35,7 +43,7 @@ public class EnemyFollow : MonoBehaviour
 
         Sight = GetComponent<EnemySight>();
         Agent = GetComponent<NavMeshAgent>();
-
+    
     }
     private void Update()
     {
@@ -67,12 +75,43 @@ public class EnemyFollow : MonoBehaviour
         if (State == EnemyState.Shooting)
         {
             Agent.isStopped = true;
-            //a fucking shooting script.
+            if(Timer <= 0)
+            {
+                Timer = 50;
+                Stats.AmmoInClip -= 1;
+                GameObject Bullets = ObjectPooling.ObjectPooler.GetPooledObject("Bullet");
+                if (Bullets != null)
+                {
+                    Bullets.transform.position = Firepos.position;
+                    Bullets.transform.rotation = transform.rotation;
+                    Bullets.SetActive(true);
+                    Bullet Bul = Bullets.GetComponent<Bullet>();
+                    Bul.BulletInfo(Stats.BulletSpeed, Stats.Damage, false);
+
+                }
+
+            }
+
+
+        }
+        else if (Stats.AmmoInClip <= 0 )
+        {
+            Timer = 300;
+            Stats.AmmoInClip = Stats.AmmoMax;
         }
         else
         {
             Agent.isStopped = false;      
             
+        }
+        TimerMinus(Stats.FireRate);
+    }
+    void TimerMinus (float FireRate)
+    {
+
+        if (Timer > 0)
+        {
+            Timer -= 0.5f * FireRate;
         }
     }
     void AtDest()

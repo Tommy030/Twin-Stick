@@ -12,7 +12,7 @@ public class GunShoot : MonoBehaviour
     [SerializeField] Transform FirePos;
     public Bullet Bull;
     public PlayerStats Stats;
-
+    public AmmoPooling Pool;
 
     private bool Cooldown;
     private bool Reloading;
@@ -22,7 +22,7 @@ public class GunShoot : MonoBehaviour
 
     private void Awake()
     {
-
+        Pool = FindObjectOfType<AmmoPooling>();
         Stats = FindObjectOfType<PlayerStats>();
      
     }
@@ -48,12 +48,23 @@ public class GunShoot : MonoBehaviour
 
         if (Input.GetMouseButton(0) && !Cooldown && WeaponHold.AmmoInClip > 0)
         {
+           
             WeaponHold.AmmoInClip -= 1;
             Timer = 100;
-            Bullet Bul = Instantiate(Bull, FirePos.position, FirePos.rotation) as Bullet;
-            Bul.Bulletspeed = WeaponHold.BulletSpeed;
-            Bul.Damage = WeaponHold.WeaponDamage;
 
+
+            GameObject Bullets = ObjectPooling.ObjectPooler.GetPooledObject("Bullet");
+            if (Bullets!= null)
+            {
+                Bullets.transform.position = FirePos.position;
+                Bullets.transform.rotation = transform.rotation;
+                Bullets.SetActive(true);
+                Bullet Bul = Bullets.GetComponent<Bullet>();
+                Bul.BulletInfo(WeaponHold.BulletSpeed, WeaponHold.WeaponDamage, true);
+
+            }
+         
+            
         }
         Reload(WeaponHold);
     }

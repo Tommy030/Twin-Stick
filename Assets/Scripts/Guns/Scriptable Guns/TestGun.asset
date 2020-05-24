@@ -22,7 +22,7 @@ MonoBehaviour:
   MaxFireRate: 6
   WeaponName: Test
   WeaponType: 1
-  BulletSpeed: 100
+  BulletSpeed: 1
   MinAmmo: 0
-  AmmoInClip: 60
+  AmmoInClip: 55
   MaxAmmo: 60
