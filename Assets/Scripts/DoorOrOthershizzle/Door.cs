@@ -26,7 +26,7 @@ public class Door : MonoBehaviour
                     {
                         if (Card == ThisDoorsKeyID)
                         {
-
+                            Opendeur();
                             //een code om whatever deur nu te doen weetj. idk... geen zin in. als t goed is werkt dit idk. we zien wel
                         }
 
@@ -35,9 +35,13 @@ public class Door : MonoBehaviour
                 }
             if (!KeyCard)
                 {
-
+                    Opendeur();
                 }
             }
         }
+    }
+    void Opendeur()
+    {
+        //de code
     }
 }

@@ -9,9 +9,9 @@ public class EnemySight : MonoBehaviour
     [SerializeField] public float Radius;
     [SerializeField]private float Turnspeed;
     [SerializeField] Transform Player;
-    
 
 
+    [SerializeField] LayerMask Layer;
 
     public bool PlayerSEE;
 
@@ -63,7 +63,7 @@ public class EnemySight : MonoBehaviour
         Collider[] Overlaps = new Collider[30];
 
         //takes count of the amount of colliders in the radius drawn by the gizmos
-        int count = Physics.OverlapSphereNonAlloc(Check.position, Radius, Overlaps);
+        int count = Physics.OverlapSphereNonAlloc(Check.position, Radius, Overlaps, Layer);
 
         for (int i = 0; i < count + 1 ; i++)
         {
@@ -85,7 +85,7 @@ public class EnemySight : MonoBehaviour
                         //raycasts are cool af
                         Ray ray = new Ray(Check.position, Target.position - Check.position);
                         RaycastHit hit;
-                        if (Physics.Raycast(ray,out hit, Radius))
+                        if (Physics.Raycast(ray,out hit, Radius,Layer))
                         {
                          
                             if (hit.transform == Target)

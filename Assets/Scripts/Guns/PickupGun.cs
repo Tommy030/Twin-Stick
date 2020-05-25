@@ -8,6 +8,10 @@ public class PickupGun : MonoBehaviour
     [SerializeField] Gun GunOnGround;
 
     Gunstats StatsGun;
+    private void Awake()
+    {
+        GunOnGround = Instantiate(GunOnGround);
+    }
     private void OnTriggerEnter(Collider other)
     {
         StatsGun =FindObjectOfType<Gunstats>();
@@ -20,8 +24,8 @@ public class PickupGun : MonoBehaviour
         if (InHit && Input.GetKey(KeyCode.E))
         {
 
-            StatsGun.Swap(GunOnGround);
-            Destroy(gameObject);
+            StatsGun.Swap(GunOnGround,gameObject);
+        
         }
     }
 

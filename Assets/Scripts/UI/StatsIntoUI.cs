@@ -6,7 +6,8 @@ public class StatsIntoUI : MonoBehaviour
 {
    [SerializeField] Text Ammo;
    [SerializeField] Text CurrentWeapon;
-
+    [SerializeField] Text Armour;
+    [SerializeField] Text HP;
     Gunstats Stats;
     private void Awake()
     {
@@ -15,6 +16,6 @@ public class StatsIntoUI : MonoBehaviour
     private void Update()
     {
         
-        Stats.SentUI(Ammo, CurrentWeapon);
+        Stats.SentUI(Ammo, CurrentWeapon,HP,Armour);
     }
 }

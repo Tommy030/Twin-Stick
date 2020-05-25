@@ -30,13 +30,14 @@ public class EnemyFollow : MonoBehaviour
 
 
     //Weapon
-    [SerializeField]ScriptEnemy Stats;
+    [SerializeField] public ScriptEnemy Stats;
     [SerializeField] private float Timer;
     [SerializeField] Transform Firepos;
-    
+    [SerializeField] private float REadout;
 
     private void Awake()
     {
+        Stats = Instantiate(Stats);
 
         WaitingTimerLeft= WaitingTime;
         Amount = Random.Range(0, Waypoints.Length);
@@ -47,6 +48,7 @@ public class EnemyFollow : MonoBehaviour
     }
     private void Update()
     {
+        REadout = Stats.HP;
         EnemyMechanics();
     }
 
@@ -56,6 +58,7 @@ public class EnemyFollow : MonoBehaviour
         AtDest();
         Chasing();
         Shoot();
+        Die();
     }
     void States()
     {
@@ -167,5 +170,10 @@ public class EnemyFollow : MonoBehaviour
             Angle = 360;
             State = EnemyState.Patroling;
         }
+    }
+    void Die()
+    {
+        if (Stats.HP < 0)
+            gameObject.SetActive(false);
     }
 }

@@ -15,22 +15,48 @@ public class Bullet : MonoBehaviour
     {
         transform.Translate(Vector3.forward * Bulletspeed * Time.deltaTime);
     }
+ 
     private void OnCollisionEnter(Collision collision)
     {
-  if (!ShotByPlayer)
+        if (!ShotByPlayer)
         {
-        gameObject.SetActive(false);
-            
+            if (collision.gameObject.tag == "Player")
+            {
+
+                PlayerStats HP = collision.gameObject.GetComponent<PlayerStats>();
+                if (HP.PlayerArmour > 0)
+                {
+
+                    HP.PlayerArmour -= Damage;
+                    if (HP.PlayerArmour < 0)
+                        HP.PlayerArmour = 0;
+                }
+                HP.PlayerHP -= Damage;
+            }
+            gameObject.SetActive(false);
+
         }
         if (ShotByPlayer)
         {
-            if (gameObject.tag == "Enemy")
+            if (collision.collider.tag == "Enemy")
             {
+                Debug.Log("hit");
+                EnemyFollow Enemy = collision.gameObject.GetComponent<EnemyFollow>();
+                Enemy.Stats.HP -= Damage;
                 gameObject.SetActive(false);
+
             }
+            else if (collision.collider.gameObject.layer != 9)
+            {
+                Debug.Log("Hit");
+       
+                gameObject.SetActive(false);
+                
+            }   
+            
         }
     }
-   public void BulletInfo(float Speed, float BDamage, bool ShootByPlayer)
+    public void BulletInfo(float Speed, float BDamage, bool ShootByPlayer)
     {
         Bulletspeed = Speed;
         Damage = BDamage;

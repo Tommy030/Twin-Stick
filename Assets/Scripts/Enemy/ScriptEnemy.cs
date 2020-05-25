@@ -4,7 +4,7 @@ using UnityEngine;
 [CreateAssetMenu(fileName = "New Enemy", menuName = "Enemy")]
 public class ScriptEnemy : ScriptableObject
 {
-
+    
     public float HP;
     public float MovementSpeed;
 
@@ -17,4 +17,6 @@ public class ScriptEnemy : ScriptableObject
     //De Enemy Reload. 
     public float AmmoMax;
     public float AmmoInClip;
+
+    
 }

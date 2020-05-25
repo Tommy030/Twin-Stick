@@ -12,10 +12,14 @@ public class PlayerStats : MonoBehaviour
 
     [SerializeField] public float MaxHP;
     [SerializeField] public float MaxArmour;
-    
-    [Header("Ammo")]
-    
 
+    [Header("Ammo")]
+
+    //Cheat
+    public float OldPlayerHP;
+    public float OldPlayerArmour;
+    public float OldMaxHP;
+    public float OldMaxArmour;
 
     [SerializeField] public int Clips;
     [SerializeField] public int MaxAmountClips;
@@ -53,6 +57,10 @@ public class PlayerStats : MonoBehaviour
 
 
         ClipsChecker();
+        if (PlayerHP <= 0)
+        {
+
+        }
     }
     void ClipsChecker()
     {
