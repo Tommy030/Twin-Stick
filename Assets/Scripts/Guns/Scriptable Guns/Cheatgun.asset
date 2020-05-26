@@ -16,7 +16,7 @@ MonoBehaviour:
   StartingSpray: 0
   Weaponspray: 0
   MaxSpray: 0
-  WeaponDamage: 0
+  WeaponDamage: 5
   StartingFireRate: 0
   FireRate: 100
   MaxFireRate: 0
@@ -24,5 +24,5 @@ MonoBehaviour:
   WeaponType: 1
   BulletSpeed: 10
   MinAmmo: 10000
-  AmmoInClip: 96353
+  AmmoInClip: 148751
   MaxAmmo: 100000

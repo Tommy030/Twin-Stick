@@ -19,4 +19,4 @@ MonoBehaviour:
   FireRate: 10
   BulletSpeed: 5
   AmmoMax: 60
-  AmmoInClip: 36
+  AmmoInClip: 47
