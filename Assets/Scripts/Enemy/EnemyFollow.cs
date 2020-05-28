@@ -78,7 +78,7 @@ public class EnemyFollow : MonoBehaviour
         if (State == EnemyState.Shooting)
         {
             Agent.isStopped = true;
-            if(Timer <= 0)
+            if(Timer <= 0 && !Pause.StaticPause.Paused)
             {
                 Timer = 50;
                 Stats.AmmoInClip -= 1;

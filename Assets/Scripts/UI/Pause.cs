@@ -2,32 +2,39 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
-
+using UnityEngine.SceneManagement;
 public class Pause : MonoBehaviour
 {
-    
-    private bool Paused;
+    public static Pause StaticPause;
+    [SerializeField]public bool Paused;
 
-    Button[] ButtonArray;
+    [SerializeField] Button[] ButtonArray;
     private void Awake()
     {
-        foreach (Button item in ButtonArray)
+        StaticPause = this;
+        if (ButtonArray != null)
         {
-            item.gameObject.SetActive(false);    
+            foreach (Button item in ButtonArray)
+            {
+                item.gameObject.SetActive(false);
+            }
         }
     }
     private void Update()
     {
-        if (Input.GetKeyDown(KeyCode.Escape))
+        if (Input.GetKeyDown(KeyCode.P))
         {
-            Paused = Checkpause();
+            PauseKnop();
         }
     }
     public void PauseKnop()
     {
         Paused = Checkpause();
     }
-    
+    public void BackToMenu()
+    {
+        SceneManager.LoadScene(0);
+    }
     public bool Checkpause()
     {
         if (Time.timeScale == 0f)

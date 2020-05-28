@@ -48,7 +48,7 @@ public class GunShoot : MonoBehaviour
         
         Time(WeaponHold.FireRate);
 
-        if (Input.GetMouseButton(0) && !Cooldown && WeaponHold.AmmoInClip > 0)
+        if (Input.GetMouseButton(0) && !Cooldown && WeaponHold.AmmoInClip > 0 && !Pause.StaticPause.Paused)
         {
            
             WeaponHold.AmmoInClip -= 1;
