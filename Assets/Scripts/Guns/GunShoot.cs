@@ -8,6 +8,8 @@ public class GunShoot : MonoBehaviour
     [SerializeField] public float BulletSpeed;
 
 
+   
+
     [Header("NonAdjustable")]
     [SerializeField] Transform FirePos;
     public Bullet Bull;
@@ -51,7 +53,7 @@ public class GunShoot : MonoBehaviour
            
             WeaponHold.AmmoInClip -= 1;
             Timer = 100;
-
+            
 
             GameObject Bullets = ObjectPooling.ObjectPooler.GetPooledObject("Bullet");
             if (Bullets!= null)
@@ -63,7 +65,7 @@ public class GunShoot : MonoBehaviour
                 Bul.BulletInfo(WeaponHold.BulletSpeed, WeaponHold.WeaponDamage, true);
 
             }
-         
+            StaticStats.Stats.Shot += 1;
             
         }
         Reload(WeaponHold);

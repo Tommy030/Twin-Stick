@@ -40,15 +40,14 @@ public class Bullet : MonoBehaviour
         {
             if (collision.collider.tag == "Enemy")
             {
-                Debug.Log("hit");
+          
                 EnemyFollow Enemy = collision.gameObject.GetComponent<EnemyFollow>();
                 Enemy.Stats.HP -= Damage;
                 gameObject.SetActive(false);
-
+                StaticStats.Stats.Hit += 1; 
             }
             else if (collision.collider.gameObject.layer != 9)
             {
-                Debug.Log("Hit");
        
                 gameObject.SetActive(false);
                 

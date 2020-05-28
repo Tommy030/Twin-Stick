@@ -4,16 +4,22 @@ using UnityEngine;
 
 public class StaticStats : MonoBehaviour
 {
-    public static int Retries;
-    public static float GameTime;
-    public static int Score;
+    public int Retries;
+    public float GameTime;
+    public int Score;
 
     //Accuracy
 
-    public static float Hit;
-    public static float Shot;
-    public static float Accuracy;
-    
+    public float Hit;
+    public float Shot;
+    public float Accuracy;
+
+    public static StaticStats Stats; 
+
+    private void Awake()
+    {
+        Stats = this;
+    }
     private void Update()
     {
         if (Time.timeScale > 0)
@@ -23,6 +29,6 @@ public class StaticStats : MonoBehaviour
             string seconds = (GameTime % 60).ToString("00");
             //Debug.Log(string.Format("{0}:{1}", minutes, seconds));
         }
-        
+        Accuracy = (Hit / Shot) * 100;
     }
 }
