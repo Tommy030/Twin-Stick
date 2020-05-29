@@ -782,6 +782,18 @@ GameObject:
     type: 3}
   m_PrefabInstance: {fileID: 8795586378639602793}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &589351876 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 8795586379161747370, guid: 3d8d6efe9983fe44f833fecbe8c4b75b,
+    type: 3}
+  m_PrefabInstance: {fileID: 8795586378639602793}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 589351873}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a9ead87c34d2ded43bec6b1ac08688ad, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!4 &589351879 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 8795586379161747374, guid: 3d8d6efe9983fe44f833fecbe8c4b75b,
@@ -1168,6 +1180,12 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 825839339}
   m_CullTransparentMesh: 0
+--- !u!65 &873012724 stripped
+BoxCollider:
+  m_CorrespondingSourceObject: {fileID: 8957453189993934999, guid: 55603a3b87b38144191aa037cce1f803,
+    type: 3}
+  m_PrefabInstance: {fileID: 8957453189396628544}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &900136607 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 407403065398538129, guid: ea82957475ebad1419424995079847e5,
@@ -2895,6 +2913,27 @@ PrefabInstance:
       propertyPath: m_Name
       value: Door
       objectReference: {fileID: 0}
+    - target: {fileID: 8957453189993934997, guid: 55603a3b87b38144191aa037cce1f803,
+        type: 3}
+      propertyPath: ThisDoorsKeyID
+      value: 
+      objectReference: {fileID: 11400000, guid: 831f509c9b1844f45b5ca21d6d8b168d,
+        type: 2}
+    - target: {fileID: 8957453189993934997, guid: 55603a3b87b38144191aa037cce1f803,
+        type: 3}
+      propertyPath: Stats
+      value: 
+      objectReference: {fileID: 589351876}
+    - target: {fileID: 8957453189993934997, guid: 55603a3b87b38144191aa037cce1f803,
+        type: 3}
+      propertyPath: isVertical
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8957453189993934997, guid: 55603a3b87b38144191aa037cce1f803,
+        type: 3}
+      propertyPath: Box
+      value: 
+      objectReference: {fileID: 873012724}
     - target: {fileID: 8957453189993934999, guid: 55603a3b87b38144191aa037cce1f803,
         type: 3}
       propertyPath: m_Enabled
