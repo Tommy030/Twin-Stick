@@ -10,7 +10,6 @@ public class Bullet : MonoBehaviour
     [SerializeField] public float Damage;
     [SerializeField] public bool ShotByPlayer;
 
-    //note to self make enemy /play enum; 
     private void Update()
     {
         transform.Translate(Vector3.forward * Bulletspeed * Time.deltaTime);
@@ -43,8 +42,12 @@ public class Bullet : MonoBehaviour
           
                 EnemyFollow Enemy = collision.gameObject.GetComponent<EnemyFollow>();
                 Enemy.Stats.HP -= Damage;
+    
+
+                StaticStats.Stats.Hit += 1;
+                StaticStats.Stats.Hit += 100;
+
                 gameObject.SetActive(false);
-                StaticStats.Stats.Hit += 1; 
             }
             else if (collision.collider.gameObject.layer != 9)
             {
