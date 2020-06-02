@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 4294097993674110629}
   - component: {fileID: 5101652455094389907}
   - component: {fileID: 1580830039550554218}
+  - component: {fileID: 6267627840414916632}
   m_Layer: 0
   m_Name: muur_middel
   m_TagString: Untagged
@@ -79,3 +80,17 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
+--- !u!64 &6267627840414916632
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 994427483958756534}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Convex: 0
+  m_CookingOptions: 30
+  m_Mesh: {fileID: -3835549739703147167, guid: 8ecc936c648080247b4c7cd63d9b0f9e, type: 3}
