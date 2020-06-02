@@ -4,13 +4,29 @@ using UnityEngine;
 
 public class Door : MonoBehaviour
 {
-
+    private bool isOpening = false;
+    private bool isClosing = false;
+    private bool isOpen = false;
+    
+    [SerializeField] private bool isVertical;
+    
+    
+    [SerializeField] private float OpenSpeed = 1f;
+    private float DoorTime = 0f;
+    
+    
     [Tooltip("Als de deur een Keyard nodig heeft klik op dit vakje en gooi die key erin. ")]
-    [SerializeField] private bool KeyCard ; 
-    [SerializeField]KeyCardScriptable ThisDoorsKeyID;
+    [SerializeField] private bool KeyCard;
+    [SerializeField] KeyCardScriptable ThisDoorsKeyID;
+    private BoxCollider Box;
 
-    [SerializeField]  PlayerStats Stats;
-   
+    [SerializeField] PlayerStats Stats;
+
+    private void Awake()
+    {
+        Box = GetComponent<BoxCollider>();
+
+    }
     private void OnTriggerStay(Collider other)
     {
         if (other.gameObject.CompareTag("Player"))
@@ -39,9 +55,69 @@ public class Door : MonoBehaviour
                 }
             }
         }
+        if (other.gameObject.tag == "Enemy")
+        {
+            Opendeur();
+        }
     }
     void Opendeur()
     {
-        //de code
+        isOpening = true;
     }
+    private void Update()
+    {
+        if (isOpening)
+        {
+            Box.enabled = false;
+            DoorTime += Time.deltaTime;
+            if (DoorTime >= 3f)
+            {
+                isOpening = false;
+                DoorTime = 0f;
+                isOpen = true;
+            }
+            if (isVertical)
+            {
+                transform.position += (Vector3.forward * OpenSpeed) * Time.deltaTime;
+            }
+            else
+            {
+                transform.position += (Vector3.right * OpenSpeed) * Time.deltaTime;
+            }
+
+        }
+        else
+        {
+            Box.enabled = true;
+        }
+        if (isOpen)
+        {
+            DoorTime += Time.deltaTime;
+            if (DoorTime >= 6f)
+            {
+                DoorTime = 0f;
+                isClosing = true;
+                isOpen = false;
+            }
+        }
+        if (isClosing)
+        {
+            Box.enabled = false;
+            DoorTime += Time.deltaTime;
+            if (DoorTime >= 3f)
+            {
+                isClosing = false;
+                DoorTime = 0f;
+            }
+            if (isVertical)
+            {
+                transform.position -= (Vector3.forward * OpenSpeed) * Time.deltaTime;
+            }
+            else
+            {
+                transform.position -= (Vector3.right * OpenSpeed) * Time.deltaTime;
+            }
+        }
+    }
+
 }

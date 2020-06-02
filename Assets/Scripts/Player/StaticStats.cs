@@ -14,7 +14,9 @@ public class StaticStats : MonoBehaviour
     public float Shot;
     public float Accuracy;
 
-    public static StaticStats Stats; 
+    public static StaticStats Stats;
+
+    public string KilledBy;  
 
     private void Awake()
     {
