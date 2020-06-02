@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 8335441761955823008}
   - component: {fileID: 1078179596905088918}
   - component: {fileID: 6758495437248920431}
+  - component: {fileID: 1623120786356243979}
   m_Layer: 0
   m_Name: muurdeur
   m_TagString: Untagged
@@ -79,3 +80,17 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
+--- !u!64 &1623120786356243979
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5041262765361319859}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Convex: 0
+  m_CookingOptions: 30
+  m_Mesh: {fileID: 7432508207683696993, guid: 9c616135fe873e24281228c8aa2620db, type: 3}

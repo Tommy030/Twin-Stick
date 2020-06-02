@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 6109347238778659563}
   - component: {fileID: 2995954020681865437}
   - component: {fileID: 8840369417862685732}
+  - component: {fileID: 2057264264693734865}
   m_Layer: 0
   m_Name: microscoop
   m_TagString: Untagged
@@ -79,3 +80,17 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
+--- !u!64 &2057264264693734865
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7103191637814972664}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Convex: 0
+  m_CookingOptions: 30
+  m_Mesh: {fileID: -6757325991844788157, guid: 03ad4ed52275b174c8c66febd490d019, type: 3}

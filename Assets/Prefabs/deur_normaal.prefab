@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 7660868261784347306}
   - component: {fileID: 2499233621862105832}
   - component: {fileID: 466078966450132319}
+  - component: {fileID: -6449107472337673523}
   m_Layer: 0
   m_Name: deur_normaal
   m_TagString: Untagged
@@ -58,7 +59,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 5561349426305759274, guid: 0b4dcc0c9dbb6b64d902c3a272b97142, type: 3}
+  - {fileID: 2100000, guid: 8c0e7b6e70a836b47858c56946a4ae01, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -79,3 +80,17 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
+--- !u!64 &-6449107472337673523
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7878308200782922989}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Convex: 0
+  m_CookingOptions: 30
+  m_Mesh: {fileID: -3293603727937046731, guid: 0b4dcc0c9dbb6b64d902c3a272b97142, type: 3}

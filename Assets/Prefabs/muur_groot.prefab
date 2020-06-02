@@ -11,8 +11,9 @@ GameObject:
   - component: {fileID: 869098772737285160}
   - component: {fileID: 8166343363804849694}
   - component: {fileID: 2479274952524503783}
+  - component: {fileID: -4219775751200094972}
   m_Layer: 0
-  m_Name: muur1
+  m_Name: muur_groot
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -79,3 +80,17 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
+--- !u!64 &-4219775751200094972
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4203249756663524923}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Convex: 0
+  m_CookingOptions: 30
+  m_Mesh: {fileID: 1163231432642140579, guid: 46134d980cc16c44a902649c567c8c54, type: 3}

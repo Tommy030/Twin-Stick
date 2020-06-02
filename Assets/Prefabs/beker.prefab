@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 4607618147218191445}
   - component: {fileID: 8675489080959094968}
   - component: {fileID: 7692763772513132183}
+  - component: {fileID: -1519405530408939512}
   m_Layer: 0
   m_Name: beker
   m_TagString: Untagged
@@ -58,7 +59,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 5561349426305759274, guid: 9249f3f40fa938846ab431086d3f5e6b, type: 3}
+  - {fileID: 2100000, guid: af52371cab6fb9345a534791c774aead, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -79,3 +80,17 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
+--- !u!64 &-1519405530408939512
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2739936184537303268}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Convex: 0
+  m_CookingOptions: 30
+  m_Mesh: {fileID: -1545099161284038509, guid: 9249f3f40fa938846ab431086d3f5e6b, type: 3}

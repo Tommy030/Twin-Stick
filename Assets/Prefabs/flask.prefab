@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 3905957344221017750}
   - component: {fileID: 6557688427928826010}
   - component: {fileID: 7021915239382185540}
+  - component: {fileID: 5592336398612580097}
   m_Layer: 0
   m_Name: flask
   m_TagString: Untagged
@@ -58,7 +59,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 5561349426305759274, guid: 9249f3f40fa938846ab431086d3f5e6b, type: 3}
+  - {fileID: 2100000, guid: af52371cab6fb9345a534791c774aead, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -79,3 +80,17 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
+--- !u!64 &5592336398612580097
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3620439209924589183}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Convex: 0
+  m_CookingOptions: 30
+  m_Mesh: {fileID: 3078203585079456790, guid: 9249f3f40fa938846ab431086d3f5e6b, type: 3}

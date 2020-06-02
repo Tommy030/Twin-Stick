@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 6729593595229039779}
   - component: {fileID: 2323671621808805525}
   - component: {fileID: 8287712295071132268}
+  - component: {fileID: -2251983747126133276}
   m_Layer: 0
   m_Name: bureaustoel
   m_TagString: Untagged
@@ -58,7 +59,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 5561349426305759274, guid: c492a7d8caea60e478f5100b9c539c8d, type: 3}
+  - {fileID: 2100000, guid: 455e97e62047f32429160e11a7a7febe, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -79,3 +80,17 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
+--- !u!64 &-2251983747126133276
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7727904696715189936}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Convex: 0
+  m_CookingOptions: 30
+  m_Mesh: {fileID: 916936225460946402, guid: c492a7d8caea60e478f5100b9c539c8d, type: 3}
