@@ -7,26 +7,16 @@ public class Door : MonoBehaviour
     private bool isOpening = false;
     private bool isClosing = false;
     private bool isOpen = false;
-    
-    [SerializeField] private bool isVertical;
-    
-    
-    [SerializeField] private float OpenSpeed = 1f;
     private float DoorTime = 0f;
-    
-    
+    [SerializeField] private bool isVertical;
+    [SerializeField] private BoxCollider Box;
+    [SerializeField] private float OpenSpeed = 1f;
     [Tooltip("Als de deur een Keyard nodig heeft klik op dit vakje en gooi die key erin. ")]
-    [SerializeField] private bool KeyCard;
-    [SerializeField] KeyCardScriptable ThisDoorsKeyID;
-    private BoxCollider Box;
+    [SerializeField] private bool KeyCard ; 
+    [SerializeField]KeyCardScriptable ThisDoorsKeyID;
 
-    [SerializeField] PlayerStats Stats;
-
-    private void Awake()
-    {
-        Box = GetComponent<BoxCollider>();
-
-    }
+    [SerializeField]  PlayerStats Stats;
+   
     private void OnTriggerStay(Collider other)
     {
         if (other.gameObject.CompareTag("Player"))
@@ -42,8 +32,12 @@ public class Door : MonoBehaviour
                     {
                         if (Card == ThisDoorsKeyID)
                         {
-                            Opendeur();
-                            //een code om whatever deur nu te doen weetj. idk... geen zin in. als t goed is werkt dit idk. we zien wel
+                            if (!isOpen)
+                            {
+                              Opendeur();
+
+                            }
+                            //een code om whatever deur nu te doen weetj. idk... geen zin in. als t goed is werkt dit idk. we zien wel/
                         }
 
 
@@ -51,13 +45,13 @@ public class Door : MonoBehaviour
                 }
             if (!KeyCard)
                 {
-                    Opendeur();
+                    if (!isOpen)
+                    {
+                        Opendeur();
+
+                    }
                 }
             }
-        }
-        if (other.gameObject.tag == "Enemy")
-        {
-            Opendeur();
         }
     }
     void Opendeur()
@@ -82,9 +76,9 @@ public class Door : MonoBehaviour
             }
             else
             {
-                transform.position += (Vector3.right * OpenSpeed) * Time.deltaTime;
+               transform.position += (Vector3.right * OpenSpeed) * Time.deltaTime;
             }
-
+      
         }
         else
         {
@@ -119,5 +113,5 @@ public class Door : MonoBehaviour
             }
         }
     }
-
+    
 }
