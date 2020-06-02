@@ -22,8 +22,8 @@ public class Bullet : MonoBehaviour
             if (collision.gameObject.tag == "Player")
             {
 
-                PlayerStats HP = collision.gameObject.GetComponent<PlayerStats>().ShotAt(Damage,ShotBy);
-        
+                PlayerStats HP = collision.gameObject.GetComponent<PlayerStats>();
+                HP.ShotAt(Damage, Shotby);
             }
             gameObject.SetActive(false);
 

@@ -1,18 +1,17 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-
+using UnityEngine.UI;
 public class TextDeathScreen : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
 
-    // Update is called once per frame
-    void Update()
+    Text Killedby;
+
+
+    private void Awake()
     {
-        
+        Killedby.text = StaticStats.Stats.KilledBy;    
     }
+    
+
 }
