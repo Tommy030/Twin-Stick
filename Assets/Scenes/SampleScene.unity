@@ -2196,6 +2196,11 @@ PrefabInstance:
       propertyPath: Box
       value: 
       objectReference: {fileID: 873012724}
+    - target: {fileID: 8957453189993934997, guid: 55603a3b87b38144191aa037cce1f803,
+        type: 3}
+      propertyPath: KeyCard
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 8957453189993934999, guid: 55603a3b87b38144191aa037cce1f803,
         type: 3}
       propertyPath: m_Enabled

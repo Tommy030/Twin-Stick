@@ -37,7 +37,7 @@ public class Door : MonoBehaviour
                               Opendeur();
 
                             }
-                            //een code om whatever deur nu te doen weetj. idk... geen zin in. als t goed is werkt dit idk. we zien wel
+                            //een code om whatever deur nu te doen weetj. idk... geen zin in. als t goed is werkt dit idk. we zien wel/
                         }
 
 
