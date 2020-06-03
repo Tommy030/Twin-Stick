@@ -14,7 +14,7 @@ public class EnemyFollow : MonoBehaviour
 {
 
     NavMeshAgent Agent;
-    [SerializeField] EnemySight Sight;
+    EnemySight Sight;
     [SerializeField] GameObject[] Waypoints;
     [SerializeField] private int Amount;
     [SerializeField] private EnemyState State = EnemyState.Patroling;
