@@ -1,7 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-
+using UnityEngine.SceneManagement;
 public class PlayerStats : MonoBehaviour
 {
     [Header("Adjustables")]
@@ -82,6 +82,11 @@ public class PlayerStats : MonoBehaviour
         PlayerHP -= Damage;
 
         StaticStats.Stats.KilledBy = ShotBy;
+
+        if (PlayerHP <= 0)
+        {
+            SceneManager.LoadScene("Death");
+        }
     }
     
 }

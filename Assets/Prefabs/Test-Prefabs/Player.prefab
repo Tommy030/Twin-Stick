@@ -111,6 +111,7 @@ MonoBehaviour:
   FirePos: {fileID: 8795586378975079108}
   Bull: {fileID: 3498440173987207286, guid: 9c0669716aea88b4585dd5a6a3c734c0, type: 3}
   Stats: {fileID: 0}
+  Pool: {fileID: 0}
   Timer: 0
   TimerReload: 0
 --- !u!1 &8795586378975079109
@@ -161,7 +162,7 @@ GameObject:
   - component: {fileID: 8795586379161747363}
   - component: {fileID: 8795586379161747360}
   m_Layer: 0
-  m_Name: Cube
+  m_Name: Player
   m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 1
@@ -176,7 +177,7 @@ Transform:
   m_GameObject: {fileID: 8795586379161747368}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0.22, y: 2.47, z: -14.95}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 0.5, y: 0.5, z: 0.5}
   m_Children:
   - {fileID: 8795586378787422960}
   m_Father: {fileID: 0}
@@ -292,6 +293,10 @@ MonoBehaviour:
   MovementSpeed: 5
   MaxHP: 100
   MaxArmour: 100
+  OldPlayerHP: 0
+  OldPlayerArmour: 0
+  OldMaxHP: 0
+  OldMaxArmour: 0
   Clips: 0
   MaxAmountClips: 0
   AmmoPerClip: 0
@@ -333,3 +338,5 @@ MonoBehaviour:
   Shoot: {fileID: 0}
   Ammo: 0
   FireRate: 0
+  Cheat: 0
+  CheatStats: {fileID: 0}

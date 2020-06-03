@@ -89,7 +89,7 @@ public class EnemyFollow : MonoBehaviour
                     Bullets.transform.rotation = transform.rotation;
                     Bullets.SetActive(true);
                     Bullet Bul = Bullets.GetComponent<Bullet>();
-                    Bul.BulletInfo(Stats.BulletSpeed, Stats.Damage, false);
+                    Bul.BulletInfo(Stats.BulletSpeed, Stats.Damage, false,"Patrolling Enemy");
 
                 }
 

@@ -17,7 +17,10 @@ public class EnemySight : MonoBehaviour
 
     [SerializeField]public Vector3 LastLocPlayerSeen;
 
-    
+    private void Awake()
+    {
+        Player = FindObjectOfType<PlayerStats>().transform;
+    }
     private void Update()
     {
         PlayerSEE = InFOV(transform, Player, Angle, Radius);
@@ -60,7 +63,7 @@ public class EnemySight : MonoBehaviour
     public  bool InFOV(Transform Check, Transform Target, float MaxAngle, float Radius)
     {
         // adds colliders into this list
-        Collider[] Overlaps = new Collider[30];
+        Collider[] Overlaps = new Collider[300];
 
         //takes count of the amount of colliders in the radius drawn by the gizmos
         int count = Physics.OverlapSphereNonAlloc(Check.position, Radius, Overlaps, Layer);

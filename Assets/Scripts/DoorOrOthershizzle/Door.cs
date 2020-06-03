@@ -8,15 +8,21 @@ public class Door : MonoBehaviour
     private bool isClosing = false;
     private bool isOpen = false;
     private float DoorTime = 0f;
+
+
     [SerializeField] private bool isVertical;
-    [SerializeField] private BoxCollider Box;
     [SerializeField] private float OpenSpeed = 1f;
     [Tooltip("Als de deur een Keyard nodig heeft klik op dit vakje en gooi die key erin. ")]
     [SerializeField] private bool KeyCard ; 
     [SerializeField]KeyCardScriptable ThisDoorsKeyID;
+    private BoxCollider Box;
 
+    float OldOpenSpeed;
     [SerializeField]  PlayerStats Stats;
-   
+    private void Awake()
+    {
+        Box = GetComponent<BoxCollider>();
+    }
     private void OnTriggerStay(Collider other)
     {
         if (other.gameObject.CompareTag("Player"))
@@ -52,6 +58,13 @@ public class Door : MonoBehaviour
                     }
                 }
             }
+        }
+        if (other.gameObject.tag == "Enemy")
+        {
+            OldOpenSpeed = OpenSpeed;
+
+            OpenSpeed = 5;
+            Opendeur();
         }
     }
     void Opendeur()
