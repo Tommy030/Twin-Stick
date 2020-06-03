@@ -40,11 +40,16 @@ public class EnemyFollow : MonoBehaviour
         Stats = Instantiate(Stats);
 
         WaitingTimerLeft= WaitingTime;
-        Amount = Random.Range(0, Waypoints.Length);
 
+        Waypoints = GameObject.FindGameObjectsWithTag("Waypoint");
+      
+
+
+        
         Sight = GetComponent<EnemySight>();
         Agent = GetComponent<NavMeshAgent>();
     
+
     }
     private void Update()
     {
@@ -144,12 +149,12 @@ public class EnemyFollow : MonoBehaviour
     
     void Patrol()
     {
-        Amount += 1;
-        if (Amount >= Waypoints.Length)
-        {
-            Amount = 0;
+        int oldint = Amount;
+        Amount = Random.Range(0,Waypoints.Length);
+        while (Amount == oldint)
+            Amount = Random.Range(0, Waypoints.Length);
 
-        }
+       
         Agent.SetDestination(Waypoints[Amount].transform.position);
 
     }

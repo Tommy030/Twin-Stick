@@ -8,6 +8,8 @@ TagManager:
   - Bullet
   - Walls
   - Floor
+  - Popup
+  - Waypoint
   layers:
   - Default
   - TransparentFX
