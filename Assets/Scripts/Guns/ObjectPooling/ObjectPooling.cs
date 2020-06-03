@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 [System.Serializable]
 public class ObjectPoolItem
 {
@@ -18,6 +19,7 @@ public class ObjectPooling : MonoBehaviour
 
     public List<ObjectPoolItem> ItemsToPool;
 
+    [SerializeField] GameObject Canvas;
     private void Awake()
     {
         ObjectPooler = this;
@@ -30,9 +32,15 @@ public class ObjectPooling : MonoBehaviour
         {
             for (int i = 0; i < item.amountToPool; i++)
             {
+                
                 GameObject obj = (GameObject)Instantiate(item.objectToPool);
                 obj.SetActive(false);
                 pooledObjects.Add(obj);
+
+                if (obj.tag == "Popup") {
+
+                    obj.transform.SetParent(Canvas.transform);
+                }
             }
         }
         
@@ -56,6 +64,12 @@ public class ObjectPooling : MonoBehaviour
                     GameObject obj = (GameObject)Instantiate(item.objectToPool);
                     obj.SetActive(false);
                     pooledObjects.Add(obj);
+
+                    if (obj.tag == "Popup")
+                    {
+
+                        obj.transform.SetParent(Canvas.transform);
+                    }
                     return obj;
 
                 }

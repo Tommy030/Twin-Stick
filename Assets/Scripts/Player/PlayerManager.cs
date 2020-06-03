@@ -15,7 +15,6 @@ public class PlayerManager : MonoBehaviour
         Instance = this;
 
 
-        Debug.Log(Instance.Player.GetComponent<PlayerStats>().MaxHP.ToString());
     }
 
 
