@@ -1,7 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-
+using UnityEngine.SceneManagement;
 public class PlayerStats : MonoBehaviour
 {
     [Header("Adjustables")]
@@ -69,5 +69,24 @@ public class PlayerStats : MonoBehaviour
         AmmoPerClip = AmmoTypes[AmmoType].AmmoPerClip;
     }
 
+
+    public void ShotAt(float Damage, string ShotBy)
+    {
+        if (PlayerArmour > 0)
+        {
+
+            PlayerArmour -= Damage;
+            if (PlayerArmour < 0)
+                PlayerArmour = 0;
+        }
+        PlayerHP -= Damage;
+
+        StaticStats.Stats.KilledBy = ShotBy;
+
+        if (PlayerHP <= 0)
+        {
+            SceneManager.LoadScene("Death");
+        }
+    }
     
 }

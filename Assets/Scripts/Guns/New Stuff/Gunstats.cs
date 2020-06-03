@@ -24,6 +24,7 @@ public class Gunstats : MonoBehaviour
     {
         Shoot = FindObjectOfType<GunShoot>();
         Stats = GetComponent<PlayerStats>();
+        CurrentStats = Instantiate(CurrentStats);
     }
     private void Update()
     {
@@ -107,7 +108,7 @@ public class Gunstats : MonoBehaviour
         WeaponName.text = (CurrentStats.WeaponName);
 
         }
-        HP.text = ("Health: " + Stats.PlayerHP.ToString() + "/" + Stats.MaxHP.ToString());
-        Armour.text = ("Armour: "+Stats.PlayerArmour.ToString() + "/" + Stats.MaxArmour.ToString());
+        HP.text = (Stats.PlayerHP.ToString() + "/" + Stats.MaxHP.ToString());
+        Armour.text = Stats.PlayerArmour.ToString() + "/" + Stats.MaxArmour.ToString();
     } 
 }

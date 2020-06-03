@@ -15,10 +15,18 @@ public class StaticStats : MonoBehaviour
     public float Accuracy;
 
     public static StaticStats Stats; 
+        
+    public string KilledBy;
 
+    public string SceneName;
     private void Awake()
     {
-        Stats = this;
+        DontDestroyOnLoad(this);
+        if (Stats == null)
+        {
+            Stats = this;
+        }
+      
     }
     private void Update()
     {

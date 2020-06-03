@@ -12,6 +12,8 @@ GameObject:
   - component: {fileID: 957164839058632777}
   - component: {fileID: 5842387628434180277}
   - component: {fileID: -922488699043285953}
+  - component: {fileID: 3708272940563168893}
+  - component: {fileID: 368976704953520341}
   m_Layer: 0
   m_Name: deur_slot
   m_TagString: Untagged
@@ -91,6 +93,36 @@ MeshCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Convex: 0
+  m_Convex: 1
   m_CookingOptions: 30
   m_Mesh: {fileID: 908802173536143984, guid: 7349c1f8c64e3cb4995705033a0ec015, type: 3}
+--- !u!114 &3708272940563168893
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3069408146475393557}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 924ac3a4ea0a60446930a0fea1fb77e6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  isVertical: 1
+  OpenSpeed: 1
+  KeyCard: 0
+  ThisDoorsKeyID: {fileID: 0}
+  Stats: {fileID: 0}
+--- !u!65 &368976704953520341
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3069408146475393557}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 1.6755903, y: 2.0149999, z: 0.68}
+  m_Center: {x: -0.04657936, y: 1.0174999, z: 0}

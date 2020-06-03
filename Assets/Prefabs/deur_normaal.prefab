@@ -12,6 +12,8 @@ GameObject:
   - component: {fileID: 2499233621862105832}
   - component: {fileID: 466078966450132319}
   - component: {fileID: -6449107472337673523}
+  - component: {fileID: 2987352897565653231}
+  - component: {fileID: 1511674694449753645}
   m_Layer: 0
   m_Name: deur_normaal
   m_TagString: Untagged
@@ -94,3 +96,33 @@ MeshCollider:
   m_Convex: 0
   m_CookingOptions: 30
   m_Mesh: {fileID: -3293603727937046731, guid: 0b4dcc0c9dbb6b64d902c3a272b97142, type: 3}
+--- !u!114 &2987352897565653231
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7878308200782922989}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 924ac3a4ea0a60446930a0fea1fb77e6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  isVertical: 1
+  OpenSpeed: 1
+  KeyCard: 0
+  ThisDoorsKeyID: {fileID: 0}
+  Stats: {fileID: 0}
+--- !u!65 &1511674694449753645
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7878308200782922989}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 1.5585938, y: 2.0149999, z: 0.68}
+  m_Center: {x: 0.0037395954, y: 1.0174999, z: 0}

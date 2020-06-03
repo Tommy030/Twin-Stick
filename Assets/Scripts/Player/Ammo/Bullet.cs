@@ -9,7 +9,7 @@ public class Bullet : MonoBehaviour
     [SerializeField] public float Bulletspeed;
     [SerializeField] public float Damage;
     [SerializeField] public bool ShotByPlayer;
-
+    [SerializeField] public string Shotby;
     private void Update()
     {
         transform.Translate(Vector3.forward * Bulletspeed * Time.deltaTime);
@@ -23,14 +23,7 @@ public class Bullet : MonoBehaviour
             {
 
                 PlayerStats HP = collision.gameObject.GetComponent<PlayerStats>();
-                if (HP.PlayerArmour > 0)
-                {
-
-                    HP.PlayerArmour -= Damage;
-                    if (HP.PlayerArmour < 0)
-                        HP.PlayerArmour = 0;
-                }
-                HP.PlayerHP -= Damage;
+                HP.ShotAt(Damage, Shotby);
             }
             gameObject.SetActive(false);
 
@@ -45,7 +38,7 @@ public class Bullet : MonoBehaviour
     
 
                 StaticStats.Stats.Hit += 1;
-                StaticStats.Stats.Hit += 100;
+                StaticStats.Stats.Score += 100;
 
                 gameObject.SetActive(false);
             }
@@ -58,11 +51,13 @@ public class Bullet : MonoBehaviour
             
         }
     }
-    public void BulletInfo(float Speed, float BDamage, bool ShootByPlayer)
+    public void BulletInfo(float Speed, float BDamage, bool ShootByPlayer,string ShotByName)
     {
         Bulletspeed = Speed;
         Damage = BDamage;
         ShotByPlayer = ShootByPlayer;
+        Shotby = ShotByName; 
     }
+    
 
 }

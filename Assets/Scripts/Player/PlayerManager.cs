@@ -4,15 +4,18 @@ using UnityEngine;
 
 public class PlayerManager : MonoBehaviour
 {
-    public static PlayerManager Instance { get; private set; }
+    [SerializeField] public static PlayerManager Instance;
 
     public GameObject Player;
     
   
-    private void Awake()
+    private void Start()
     {
+        Player = FindObjectOfType<PlayerStats>().gameObject;
         Instance = this;
-        DontDestroyOnLoad(gameObject);
+
+
+        Debug.Log(Instance.Player.GetComponent<PlayerStats>().MaxHP.ToString());
     }
 
 

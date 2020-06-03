@@ -1,6 +1,10 @@
 fileFormatVersion: 2
+<<<<<<< HEAD:Assets/Scenes/Startscreen.unity.meta
+guid: 07cbf3abdb253814f86c9261ca619c6f
+=======
 guid: 176a1baaaa84b5343902eec8f6ddcb56
 folderAsset: yes
+>>>>>>> 5d59fdc62ec4e364243440544f74c6ac44adde64:Assets/Art/texures.meta
 DefaultImporter:
   externalObjects: {}
   userData: 

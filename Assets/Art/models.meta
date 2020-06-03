@@ -1,5 +1,21 @@
 fileFormatVersion: 2
+<<<<<<< HEAD
+<<<<<<< HEAD:Assets/Art/models.meta
 guid: 8cb0a001cd1620e4aa1a94d0d84b24c0
+=======
+guid: 573404b691b796e4c865710707a0b3cc
+>>>>>>> d4332e35a93e263ffe2a92c97d5d29012187d075:Assets/Art/Enemies.meta
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD:Assets/Art/models.meta
+guid: fff03d3ee4e1bb240b91c9c9c3a5a087
+=======
+guid: 573404b691b796e4c865710707a0b3cc
+>>>>>>> 05590b8caf054a555c453a9c7813f7b46e67674d:Assets/Art/Enemies.meta
+=======
+guid: 341a6caebd79c0e43a9cb2c33fbac403
+>>>>>>> 05590b8caf054a555c453a9c7813f7b46e67674d
+>>>>>>> d4332e35a93e263ffe2a92c97d5d29012187d075
 folderAsset: yes
 DefaultImporter:
   externalObjects: {}

@@ -15,8 +15,11 @@ public class MovementPlayer : MonoBehaviour
     [Header("Non-Adjustables")]
     private PlayerStats Stats;
 
+    Rigidbody rb;
     private void Awake()
     {
+     
+        rb = GetComponent<Rigidbody>();
         Stats = GetComponent<PlayerStats>();
     }
 
@@ -31,21 +34,21 @@ public class MovementPlayer : MonoBehaviour
     void Upwards()
     {
         if (Input.GetKey(Upwards_))
-            transform.position += Vector3.forward * Stats.MovementSpeed * Time.deltaTime;
+            rb.AddForce(Vector3.forward * Stats.MovementSpeed * Time.deltaTime);
     }
     void Left()
     {
          if (Input.GetKey(Left_))
-            transform.position += Vector3.left* Stats.MovementSpeed * Time.deltaTime;
+            rb.AddForce(Vector3.left * Stats.MovementSpeed * Time.deltaTime);
     }
     void Right()
     {
         if (Input.GetKey(Right_))
-            transform.position += Vector3.back* Stats.MovementSpeed * Time.deltaTime;
+            rb.AddForce(Vector3.back * Stats.MovementSpeed * Time.deltaTime);
     }
     void Down()
     {
         if (Input.GetKey(Down_))
-            transform.position += Vector3.right* Stats.MovementSpeed * Time.deltaTime;
+            rb.AddForce(Vector3.right * Stats.MovementSpeed * Time.deltaTime);
     }
 }
