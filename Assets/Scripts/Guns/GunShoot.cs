@@ -62,7 +62,7 @@ public class GunShoot : MonoBehaviour
                 Bullets.transform.rotation = transform.rotation;
                 Bullets.SetActive(true);
                 Bullet Bul = Bullets.GetComponent<Bullet>();
-                Bul.BulletInfo(WeaponHold.BulletSpeed, WeaponHold.WeaponDamage, true);
+                Bul.BulletInfo(WeaponHold.BulletSpeed, WeaponHold.WeaponDamage, true, "Player");
 
             }
             StaticStats.Stats.Shot += 1;

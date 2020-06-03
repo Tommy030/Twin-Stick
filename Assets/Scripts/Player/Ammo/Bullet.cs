@@ -38,7 +38,7 @@ public class Bullet : MonoBehaviour
     
 
                 StaticStats.Stats.Hit += 1;
-                StaticStats.Stats.Hit += 100;
+                StaticStats.Stats.Score += 100;
 
                 gameObject.SetActive(false);
             }
