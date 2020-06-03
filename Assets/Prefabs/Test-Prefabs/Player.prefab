@@ -333,7 +333,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c6ef217399cced842bbd6f1ad3a70997, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  CurrentStats: {fileID: 0}
+  CurrentStats: {fileID: 11400000, guid: df6654c8b5feefb4ca2e6977659297c4, type: 2}
   Stats: {fileID: 0}
   Shoot: {fileID: 0}
   Ammo: 0

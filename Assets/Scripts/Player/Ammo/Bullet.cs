@@ -40,12 +40,12 @@ public class Bullet : MonoBehaviour
           
                 EnemyFollow Enemy = collision.gameObject.GetComponent<EnemyFollow>();
                 Enemy.Stats.HP -= Damage;
-    
 
+                PopUp();
                 StaticStats.Stats.Hit += 1;
                 StaticStats.Stats.Score += 100;
 
-            PopUp();
+            
                
                 gameObject.SetActive(false);
             }
@@ -55,6 +55,7 @@ public class Bullet : MonoBehaviour
                 gameObject.SetActive(false);
                 
             }
+            
         }
     }
     public void PopUp()

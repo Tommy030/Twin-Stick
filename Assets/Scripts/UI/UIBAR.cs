@@ -16,8 +16,8 @@ public class UIBAR : MonoBehaviour
     private void Update()
     {
 
-        SetMax(PlayerManager.Instance.Player.GetComponent<PlayerStats>().MaxHP, HP, PlayerManager.Instance.Player.GetComponent<PlayerStats>().PlayerHP);
-        SetMax(PlayerManager.Instance.Player.GetComponent<PlayerStats>().MaxArmour, Armor, PlayerManager.Instance.Player.GetComponent<PlayerStats>().PlayerArmour);
+        //SetMax(PlayerManager.Instance.Player.GetComponent<PlayerStats>().MaxHP, HP, PlayerManager.Instance.Player.GetComponent<PlayerStats>().PlayerHP);
+        //SetMax(PlayerManager.Instance.Player.GetComponent<PlayerStats>().MaxArmour, Armor, PlayerManager.Instance.Player.GetComponent<PlayerStats>().PlayerArmour);
         SetBar(HP, PlayerManager.Instance.Player.GetComponent<PlayerStats>().PlayerHP);
         SetBar(Armor, PlayerManager.Instance.Player.GetComponent<PlayerStats>().PlayerArmour);
     }
