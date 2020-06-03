@@ -1,7 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-
+using TMPro;
 
 public class Bullet : MonoBehaviour
 {
@@ -10,6 +10,9 @@ public class Bullet : MonoBehaviour
     [SerializeField] public float Damage;
     [SerializeField] public bool ShotByPlayer;
     [SerializeField] public string Shotby;
+
+    TextMeshProUGUI meshText;
+
     private void Update()
     {
         transform.Translate(Vector3.forward * Bulletspeed * Time.deltaTime);
@@ -24,7 +27,9 @@ public class Bullet : MonoBehaviour
 
                 PlayerStats HP = collision.gameObject.GetComponent<PlayerStats>();
                 HP.ShotAt(Damage, Shotby);
+                PopUp();
             }
+         
             gameObject.SetActive(false);
 
         }
@@ -40,6 +45,8 @@ public class Bullet : MonoBehaviour
                 StaticStats.Stats.Hit += 1;
                 StaticStats.Stats.Score += 100;
 
+            PopUp();
+               
                 gameObject.SetActive(false);
             }
             else if (collision.collider.gameObject.layer != 9)
@@ -47,7 +54,21 @@ public class Bullet : MonoBehaviour
        
                 gameObject.SetActive(false);
                 
-            }   
+            }
+        }
+    }
+    public void PopUp()
+    {
+        GameObject TextPop = ObjectPooling.ObjectPooler.GetPooledObject("Popup");
+        meshText    = TextPop.GetComponent<TextMeshProUGUI>();
+        
+        if (TextPop != null)
+        {
+
+            TextPop.transform.position = Camera.main.WorldToScreenPoint(transform.position);
+
+            meshText.SetText(Damage.ToString());
+            TextPop.SetActive(true);
             
         }
     }
