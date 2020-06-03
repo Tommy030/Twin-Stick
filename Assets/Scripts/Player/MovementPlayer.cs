@@ -18,7 +18,7 @@ public class MovementPlayer : MonoBehaviour
     Rigidbody rb;
     private void Awake()
     {
-      
+     
         rb = GetComponent<Rigidbody>();
         Stats = GetComponent<PlayerStats>();
     }
@@ -33,7 +33,7 @@ public class MovementPlayer : MonoBehaviour
 
     void Upwards()
     {
-        if (Input.GetKey(Upwards_) )
+        if (Input.GetKey(Upwards_))
             rb.AddForce(Vector3.forward * Stats.MovementSpeed * Time.deltaTime);
     }
     void Left()
