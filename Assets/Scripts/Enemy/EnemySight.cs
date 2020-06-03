@@ -8,7 +8,7 @@ public class EnemySight : MonoBehaviour
     [SerializeField]  public float Angle = 10f;
     [SerializeField] public float Radius;
     [SerializeField]private float Turnspeed;
-    [SerializeField] Transform Player;
+   public static Transform Player;
 
 
     [SerializeField] LayerMask Layer;
@@ -39,7 +39,9 @@ public class EnemySight : MonoBehaviour
     
     private void OnDrawGizmos()
     {
-        
+        if (Player != null)
+        {
+
 
         Vector3 FovLine1 = Quaternion.AngleAxis(Angle, transform.up) * transform.forward * Radius;
         Vector3 FovLine2 = Quaternion.AngleAxis(-Angle, transform.up) * transform.forward * Radius;
@@ -58,6 +60,7 @@ public class EnemySight : MonoBehaviour
         
         Gizmos.color = Color.black;
         Gizmos.DrawRay(transform.position, transform.forward * Radius);
+        }
          
     }
     public  bool InFOV(Transform Check, Transform Target, float MaxAngle, float Radius)
