@@ -11,6 +11,8 @@ GameObject:
   - component: {fileID: 7381116072463217314}
   - component: {fileID: 1960749504275122324}
   - component: {fileID: 5190805537270035565}
+  - component: {fileID: 8159025291629709812}
+  - component: {fileID: 5214867949616095775}
   m_Layer: 0
   m_Name: armor
   m_TagString: Untagged
@@ -79,3 +81,37 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
+--- !u!64 &8159025291629709812
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5779706218143432881}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Convex: 1
+  m_CookingOptions: 30
+  m_Mesh: {fileID: 3218398873705182435, guid: 8ebdde4d0a8ebfc42b8416986b278643, type: 3}
+--- !u!114 &5214867949616095775
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5779706218143432881}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 60685f01c609a324693bba9c2fbd182e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  AmountAddedArmour: 50
+  Armor: 1
+  AmountAddedHP: 0
+  HP: 0
+  AmountAddedClips: 3
+  Clips: 0
+  KeyCard: {fileID: 0}
+  KeyC: 0
