@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 5038872425794992069}
   - component: {fileID: 1644133467485539132}
   - component: {fileID: 6987919235698684774}
+  - component: {fileID: 2770198318314416699}
   m_Layer: 0
   m_Name: medkit
   m_TagString: Untagged
@@ -91,6 +92,26 @@ MeshCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Convex: 0
+  m_Convex: 1
   m_CookingOptions: 30
   m_Mesh: {fileID: 6432961967870269468, guid: c8af2e0a764220e48a41d95497453950, type: 3}
+--- !u!114 &2770198318314416699
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1075784861716627424}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 60685f01c609a324693bba9c2fbd182e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  AmountAddedArmour: 0
+  Armor: 0
+  AmountAddedHP: 50
+  HP: 1
+  AmountAddedClips: 3
+  Clips: 0
+  KeyCard: {fileID: 0}
+  KeyC: 0
