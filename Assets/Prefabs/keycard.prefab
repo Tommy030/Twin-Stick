@@ -12,6 +12,8 @@ GameObject:
   - component: {fileID: 8386688957950723140}
   - component: {fileID: 2836995393325365437}
   - component: {fileID: 3842208636334560572}
+  - component: {fileID: 7108601114570180167}
+  - component: {fileID: 1584427189631848783}
   m_Layer: 0
   m_Name: keycard
   m_TagString: Untagged
@@ -94,3 +96,36 @@ MeshCollider:
   m_Convex: 0
   m_CookingOptions: 30
   m_Mesh: {fileID: -8787565364189234936, guid: ec7ce9dd0a79a6d439c7e5cff89869c1, type: 3}
+--- !u!114 &7108601114570180167
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4567738864227175521}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 60685f01c609a324693bba9c2fbd182e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  AmountAddedArmour: 0
+  Armor: 0
+  AmountAddedHP: 0
+  HP: 0
+  AmountAddedClips: 0
+  Clips: 0
+  KeyCard: {fileID: 0}
+  KeyC: 1
+--- !u!65 &1584427189631848783
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4567738864227175521}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 1.796171, y: 1.7314152, z: 2.5089955}
+  m_Center: {x: -0.27804458, y: -0.25544232, z: 0.0723176}

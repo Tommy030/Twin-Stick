@@ -26,8 +26,8 @@ public class Bullet : MonoBehaviour
             {
 
                 PlayerStats HP = collision.gameObject.GetComponent<PlayerStats>();
-                HP.ShotAt(Damage, Shotby);
                 PopUp();
+                HP.ShotAt(Damage, Shotby);
             }
          
             gameObject.SetActive(false);
@@ -80,6 +80,7 @@ public class Bullet : MonoBehaviour
         ShotByPlayer = ShootByPlayer;
         Shotby = ShotByName; 
     }
+    
     
 
 }

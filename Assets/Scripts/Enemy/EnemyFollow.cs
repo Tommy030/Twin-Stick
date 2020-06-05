@@ -35,6 +35,9 @@ public class EnemyFollow : MonoBehaviour
     [SerializeField] Transform Firepos;
     [SerializeField] private float REadout;
 
+    [SerializeField] float timer;
+    private Vector3 Previous;
+    [SerializeField] float Currrentspeed;
     private void Awake()
     {
         Stats = Instantiate(Stats);
@@ -64,6 +67,26 @@ public class EnemyFollow : MonoBehaviour
         Chasing();
         Shoot();
         Die();
+        Debug();
+    }
+    void Debug()
+    {
+        if (State != EnemyState.Shooting)
+        {
+            Vector3 Curm = transform.position - Previous;
+            Currrentspeed = Curm.magnitude / Time.deltaTime;
+            Previous = transform.position;
+            if (Currrentspeed < 2)
+            {
+                timer += Time.deltaTime;
+
+                if (timer >= 3)
+                {
+                Patrol();
+                    timer = 0;
+                }
+            }
+        }
     }
     void States()
     {
