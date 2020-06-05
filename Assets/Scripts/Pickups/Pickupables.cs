@@ -54,4 +54,19 @@ public class Pickupables : MonoBehaviour
         } 
 
     }
+    private void OnTriggerEnter(Collider other)
+    {
+        if (other.gameObject.tag == ("Player"))
+        {
+            Stats = other.gameObject.GetComponent<PlayerStats>();
+            if (KeyC)
+            {
+                Stats.Keycard.Add(KeyCard);
+                Delete = true;
+            }
+            if (Delete)
+                Destroy(gameObject);
+
+        }
+    }
 }
