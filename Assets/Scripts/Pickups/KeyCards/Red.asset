@@ -12,4 +12,4 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 629becb3f22f4184c92f12c8f95c6a2f, type: 3}
   m_Name: Red
   m_EditorClassIdentifier: 
-  KeyCardNumber: 0
+  KeyCardNumber: 2

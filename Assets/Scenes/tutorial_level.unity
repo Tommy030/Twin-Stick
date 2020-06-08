@@ -38,21 +38,21 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0, g: 0, b: 0, a: 1}
+  m_IndirectSpecularColor: {r: 0.43853816, g: 0.48663974, b: 0.5669141, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 11
-  m_GIWorkflowMode: 1
+  m_GIWorkflowMode: 0
   m_GISettings:
     serializedVersion: 2
     m_BounceScale: 1
     m_IndirectOutputScale: 1
     m_AlbedoBoost: 1
     m_EnvironmentLightingMode: 0
-    m_EnableBakedLightmaps: 1
-    m_EnableRealtimeLightmaps: 0
+    m_EnableBakedLightmaps: 0
+    m_EnableRealtimeLightmaps: 1
   m_LightmapEditorSettings:
     serializedVersion: 12
     m_Resolution: 2
@@ -2701,7 +2701,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 1221675043}
-        m_MethodName: PauseKnop
+        m_MethodName: BackToMenu
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -6022,6 +6022,12 @@ PrefabInstance:
       propertyPath: m_Name
       value: keycard_rood
       objectReference: {fileID: 0}
+    - target: {fileID: 7108601114570180167, guid: 49937f0e2e94d734987bc02a7fb18136,
+        type: 3}
+      propertyPath: KeyCard
+      value: 
+      objectReference: {fileID: 11400000, guid: a1082e6fad00241438beef94180c6882,
+        type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 49937f0e2e94d734987bc02a7fb18136, type: 3}
 --- !u!4 &337906883 stripped
@@ -12874,6 +12880,12 @@ PrefabInstance:
       propertyPath: m_Name
       value: keycard_blauw
       objectReference: {fileID: 0}
+    - target: {fileID: 7108601114570180167, guid: 49937f0e2e94d734987bc02a7fb18136,
+        type: 3}
+      propertyPath: KeyCard
+      value: 
+      objectReference: {fileID: 11400000, guid: 831f509c9b1844f45b5ca21d6d8b168d,
+        type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 49937f0e2e94d734987bc02a7fb18136, type: 3}
 --- !u!4 &614678915 stripped
@@ -15314,8 +15326,8 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1221675042}
-        m_MethodName: 
+      - m_Target: {fileID: 1221675043}
+        m_MethodName: PauseKnop
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -24210,6 +24222,17 @@ PrefabInstance:
       propertyPath: m_Layer
       value: 11
       objectReference: {fileID: 0}
+    - target: {fileID: 3708272940563168893, guid: 3c495966fb43ee248924c78d43ee4630,
+        type: 3}
+      propertyPath: ThisDoorsKeyID
+      value: 
+      objectReference: {fileID: 11400000, guid: 831f509c9b1844f45b5ca21d6d8b168d,
+        type: 2}
+    - target: {fileID: 3708272940563168893, guid: 3c495966fb43ee248924c78d43ee4630,
+        type: 3}
+      propertyPath: KeyCard
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 5842387628434180277, guid: 3c495966fb43ee248924c78d43ee4630,
         type: 3}
       propertyPath: m_Materials.Array.data[0]
@@ -26587,6 +26610,12 @@ PrefabInstance:
       propertyPath: m_Name
       value: keycard_groen
       objectReference: {fileID: 0}
+    - target: {fileID: 7108601114570180167, guid: 49937f0e2e94d734987bc02a7fb18136,
+        type: 3}
+      propertyPath: KeyCard
+      value: 
+      objectReference: {fileID: 11400000, guid: 5306b7727090078489ecee605fbe4a43,
+        type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 49937f0e2e94d734987bc02a7fb18136, type: 3}
 --- !u!4 &1306084642 stripped
@@ -31018,6 +31047,12 @@ PrefabInstance:
       propertyPath: m_Name
       value: keycard_geel
       objectReference: {fileID: 0}
+    - target: {fileID: 7108601114570180167, guid: 49937f0e2e94d734987bc02a7fb18136,
+        type: 3}
+      propertyPath: KeyCard
+      value: 
+      objectReference: {fileID: 11400000, guid: 1f8594a0b9aaf2240bfcfc495527e056,
+        type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 49937f0e2e94d734987bc02a7fb18136, type: 3}
 --- !u!4 &1540328030 stripped
