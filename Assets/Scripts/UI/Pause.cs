@@ -8,21 +8,18 @@ public class Pause : MonoBehaviour
     public static Pause StaticPause;
     [SerializeField]public bool Paused;
 
-    [SerializeField] Button[] ButtonArray;
+    [SerializeField] GameObject Menu;
     private void Awake()
     {
         StaticPause = this;
-        if (ButtonArray != null)
+        if (Menu != null)
         {
-            foreach (Button item in ButtonArray)
-            {
-                item.gameObject.SetActive(false);
-            }
+            Menu.SetActive(false);
         }
     }
     private void Update()
     {
-        if (Input.GetKeyDown(KeyCode.P))
+        if (Input.GetKeyDown(KeyCode.Escape))
         {
             PauseKnop();
         }
@@ -33,27 +30,22 @@ public class Pause : MonoBehaviour
     }
     public void BackToMenu()
     {
-        SceneManager.LoadScene(0);
+        SceneManager.LoadScene("SelectMenu");
     }
     public bool Checkpause()
     {
         if (Time.timeScale == 0f)
         {
             Time.timeScale = 1f;
-            
-            foreach (Button item in ButtonArray)
-            {
-                item.gameObject.SetActive(false);
-            }
+
+            Menu.SetActive(false);
+
             return false;
         }
         else
         {
             Time.timeScale = 0f;
-            foreach (Button item in ButtonArray)
-            {
-                item.gameObject.SetActive(true);
-            }
+            Menu.SetActive(true);
             return true;
         }
     }
