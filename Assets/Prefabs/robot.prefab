@@ -15,7 +15,6 @@ GameObject:
   - component: {fileID: 2526482061110218528}
   - component: {fileID: -938981820925771452}
   - component: {fileID: -1180694049206383416}
-  - component: {fileID: 5134628707642711293}
   m_Layer: 10
   m_Name: robot
   m_TagString: Enemy
@@ -130,8 +129,6 @@ MonoBehaviour:
   Timer: 0
   Firepos: {fileID: 827283685480435780}
   REadout: 0
-  timer: 0
-  Currrentspeed: 0
 --- !u!195 &-938981820925771452
 NavMeshAgent:
   m_ObjectHideFlags: 0
@@ -168,22 +165,6 @@ MeshCollider:
   m_Convex: 1
   m_CookingOptions: 30
   m_Mesh: {fileID: -1102333694107221547, guid: 194b6086a2ffe1244b2fed430795bd0c, type: 3}
---- !u!54 &5134628707642711293
-Rigidbody:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 762551815943819004}
-  serializedVersion: 2
-  m_Mass: 1
-  m_Drag: 0
-  m_AngularDrag: 0.05
-  m_UseGravity: 1
-  m_IsKinematic: 1
-  m_Interpolate: 0
-  m_Constraints: 0
-  m_CollisionDetection: 0
 --- !u!1 &1755004974237137344
 GameObject:
   m_ObjectHideFlags: 0

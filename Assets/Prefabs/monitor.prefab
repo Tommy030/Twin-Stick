@@ -12,7 +12,6 @@ GameObject:
   - component: {fileID: 6414007452898844877}
   - component: {fileID: 738494272893197364}
   - component: {fileID: -1171355735153301124}
-  - component: {fileID: 2562302359938251815}
   m_Layer: 0
   m_Name: monitor
   m_TagString: Untagged
@@ -95,19 +94,3 @@ MeshCollider:
   m_Convex: 0
   m_CookingOptions: 30
   m_Mesh: {fileID: -5072188773914483968, guid: 72af657a6fd34264eb07c76f5c53d055, type: 3}
---- !u!54 &2562302359938251815
-Rigidbody:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1298020396186446056}
-  serializedVersion: 2
-  m_Mass: 1
-  m_Drag: 0
-  m_AngularDrag: 0.05
-  m_UseGravity: 1
-  m_IsKinematic: 1
-  m_Interpolate: 0
-  m_Constraints: 0
-  m_CollisionDetection: 0
